@@ -1,6 +1,6 @@
 # telescope-dirt-samples
 
-[Telescope](https://github.com/nvim-telescope/telescope.nvim) extension to fuzzy-find samples loaded by SuperDirt.
+[Telescope](https://github.com/nvim-telescope/telescope.nvim) extension to browse samples loaded by SuperDirt.
 
 ## Installation and Configuration
 
