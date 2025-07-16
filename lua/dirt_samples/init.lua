@@ -1,4 +1,4 @@
-local dirt_samples = {}
+local M = {}
 
 local pickers = require("telescope.pickers")
 local finders = require("telescope.finders")
@@ -6,18 +6,16 @@ local conf = require("telescope.config").values
 local actions = require("telescope.actions")
 local action_state = require("telescope.actions.state")
 
-local config = {
-	source_path = vim.fn.expand("~/livecoding/supercollider/superdirt-setup/tmp/sounds.txt"),
-}
+local config = {}
 
 ---@param opts? {source_path?: string}
-dirt_samples.setup = function(opts)
+M.setup = function(opts)
 	config = vim.tbl_deep_extend("force", config, opts or {})
 end
 
-dirt_samples.names = function(opts)
-	opts = opts or {}
+M.names = function(opts)
 	local sample_names = vim.fn.readfile(config.source_path)
+	opts = opts or {}
 	pickers
 		.new(opts, {
 			prompt_title = "Dirt Samples",
@@ -37,4 +35,4 @@ dirt_samples.names = function(opts)
 		:find()
 end
 
-return dirt_samples
+return M
