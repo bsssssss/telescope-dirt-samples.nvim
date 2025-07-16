@@ -36,8 +36,8 @@ No keymaps are defined by default.
 
 ## Generate the list
 
-See below for a little supercollider script to generate the list from buffers
-loaded by Superdirt.
+This is a little supercollider script to generate a file containing the names of
+samples loaded by SuperDirt. Call this after loading all your samples !
 
 ```supercollider
 (
