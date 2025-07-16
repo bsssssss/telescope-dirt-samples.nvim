@@ -1,28 +1,40 @@
-# telescope-dirt-samples.nvim
+# telescope-dirt-samples
 
-Telescope extension to fuzzy-find samples loaded by SuperDirt
-
-## Requirements
-
-- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-- A file containing the samples list.
+[Telescope](https://github.com/nvim-telescope/telescope.nvim) extension to fuzzy-find samples loaded by SuperDirt.
 
 ## Installation and Configuration
 
-Using lazy.nvim
+Add this to the `dependencies` list of telescope.
 
 ```lua
 {
   "bsssssss/telescope-dirt-samples.nvim",
   config = function()
     require("dirt_samples").setup({
-      source_path = "path/to/samples_list",
+      source_path = "path/to/file",
     })
   end,
 },
 ```
 
-## Generate a list from loaded samples in SuperDirt
+Activate the Telescope command and the extension:
+
+```lua
+pcall(require("telescope").load_extension, "dirt_samples")
+```
+
+Restart Neovim.
+
+## Usage
+
+The extension parses the file defined in `source_path` and puts each line in the
+finder.
+
+Call `:Telescope dirt_samples` to browse the samples and insert the name at cursor position.
+
+No keymaps are defined by default.
+
+## Generate the list
 
 See below for a little supercollider script to generate the list from buffers
 loaded by Superdirt.
