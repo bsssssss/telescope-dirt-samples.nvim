@@ -1,4 +1,4 @@
-# telescope-dirt-samples
+# telescope-superdirt
 
 [Telescope](https://github.com/nvim-telescope/telescope.nvim) extension to browse samples loaded by SuperDirt.
 
@@ -8,10 +8,10 @@ Add this to the `dependencies` list of telescope.
 
 ```lua
 {
-  "bsssssss/telescope-dirt-samples.nvim",
+  "bsssssss/telescope-superdirt.nvim",
   config = function()
-    require("dirt_samples").setup({
-      source_path = "path/to/file",
+    require("superdirt").setup({
+      source_dir = "path/to/data_dir",
     })
   end,
 },
@@ -20,15 +20,15 @@ Add this to the `dependencies` list of telescope.
 Activate the Telescope command and the extension:
 
 ```lua
-pcall(require("telescope").load_extension, "dirt_samples")
+pcall(require("telescope").load_extension, "superdirt")
 ```
 
 Restart Neovim.
 
 ## Usage
 
-The extension parses the file defined in `source_path` and puts each line in the
-finder.
+TODO: Correct this
+The extension parses the files defined in `source_dir` and creates finders.
 
 Call `:Telescope dirt_samples` to browse the samples and insert the name at cursor position.
 
