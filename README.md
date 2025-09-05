@@ -1,4 +1,4 @@
-# telescope-dirt-samples
+# telescope-superdirt
 
 [Telescope](https://github.com/nvim-telescope/telescope.nvim) extension to browse samples loaded by SuperDirt.
 
@@ -8,7 +8,7 @@ Add this to the `dependencies` list of telescope.
 
 ```lua
 {
-  "bsssssss/telescope-dirt-samples.nvim",
+  "bsssssss/telescope-superdirt.nvim",
   config = function()
     require("dirt_samples").setup({
       source_path = "path/to/file",
